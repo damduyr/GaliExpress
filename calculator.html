@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="backend.css">
+    <link rel="shortcut icon" href="calc.ico">
+
+    <script>
+        function data(val) {
+            document.getElementById("display").value += val;
+        }
+
+        function clr() {
+            document.getElementById('display').value = "";
+        }
+
+        function calculate() {
+            var x = document.getElementById('display').value;
+            document.getElementById('display').value = eval(x);
+        }
+    </script>
+
+</head>
+
+<body>
+    <center>
+        <table cellspacing="7px">
+            <tr>
+                <th colspan="4" style="font-size: 30px; color: rgb(75, 74, 74);">Calculator</th>
+            </tr>
+            <tr>
+                <td colspan="4"><input type="text" placeholder="0" id="display"></td>
+            </tr>
+        </table>
+        <table class="btns" cellspacing="12px">
+            <tr>
+                <td><input type="button" value="7" onclick="data('7')"></td>
+                <td><input type="button" value="8" onclick="data('8')"></td>
+                <td><input type="button" value="9" onclick="data('9')"></td>
+                <td><input type="button" value="+" onclick="data('+')"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="4" onclick="data('4')"></td>
+                <td><input type="button" value="5" onclick="data('5')"></td>
+                <td><input type="button" value="6" onclick="data('6')"></td>
+                <td><input type="button" value="-" onclick="data('-')"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="1" onclick="data('1')"></td>
+                <td><input type="button" value="2" onclick="data('2')"></td>
+                <td><input type="button" value="3" onclick="data('3')"></td>
+                <td><input type="button" value="*" onclick="data('*')"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="AC" onclick="clr()"></td>
+                <td><input type="button" value="0" onclick="data('0')"></td>
+                <td><input type="button" value="." onclick="data('.')"></td>
+                <td><input type="button" value="/" onclick="data('/')"></td>
+            </tr>
+            <tr>
+                <td colspan="4"> <input type="button" value="=" onclick="calculate()" style=" background-color: red;border-color: red; color: white; width: 215px; font-size: 35px;"></td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Customer Feedback</title>
+    <link rel="stylesheet" href="feed.css">
+    <link rel="shortcut icon" href="feedback.ico">
+
+    <script>
+        function validate() {
+            var n = document.getElementById("name");
+            var pat_name = /(^[A-Z]{1})([a-z]+[ ]{1})([A-Z]{1}[a-z]+)/
+
+            if (n.value == "") {
+                alert("Enter your name!");
+                n.style.border = "2px solid white";
+                return false;
+            } else {
+                if (pat_name.test(n.value)) {
+                    alert("Your data is submitted successfully");
+                    return true;
+                } else {
+                    alert("Please enter your correct correct name!");
+
+                    return false;
+                }
+
+            }
+        }
+
+        function validate() {
+            var e = document.getElementById("email");
+            var pat_email = /^[a-z][a-z0-9\._]+@[a-z]+.[a-z]{2,3}$/
+
+            if (e.value == "") {
+                alert("Enter your email id!");
+                e.style.border = "2px solid white";
+                return false;
+            } else {
+                if (pat_email.test(e.value)) {
+                    alert("Your data is submitted successfully");
+                    return true;
+                } else {
+                    alert("Please enter your correct mail id!");
+                    return false;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Customer Feedback</h1><br>
+        <form onsubmit="return validate()">
+            Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="name" maxlength="15"><br>E-mail Id:&nbsp;&nbsp;<input type="text" id="email"><br> Feedback:<input type="text" style="height: 125px;" id="box" required><br><br>
+            <div class="btns">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>

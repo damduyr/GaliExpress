@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="currency.css">
+    <link rel="shortcut icon" href="conv.ico">
+
+    <script>
+        function convert() {
+            var i = document.getElementById('indi').value;
+            var u_s = document.getElementById('us').value;
+            var u_k = document.getElementById('uk').value;
+            var e = document.getElementById('euro').value;
+            var j = document.getElementById('jap').value;
+
+            if (i >= 0) {
+                document.getElementById('us').value = i / 76.29;
+                document.getElementById('uk').value = i / 100.70;
+                document.getElementById('euro').value = i / 83.79;
+                document.getElementById('jap').value = i / 0.63;
+            } else {
+                alert("Invalid input!!!");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <table cellspacing="20px" cellpadding="3px">
+            <tr>
+                <td colspan="3" id="heading">Currency Converter</td>
+            </tr>
+            <tr>
+                <td><img src="india.png"></td>
+                <td style="color: white">&#8377</td>
+                <td><input type="number" id="indi"></td>
+            </tr>
+
+            <tr>
+                <td><img src="USA.png"></td>
+                <td style="color: white">&#36</td>
+                <td><input type="number" id="us"></td>
+            </tr>
+            <tr>
+                <td><img src="UK.png"></td>
+                <td style="color: white">&#163</td>
+                <td><input type="number" id="uk"></td>
+            </tr>
+            <tr>
+                <td><img src="europe.png"></td>
+                <td style="color: white">&#8364</td>
+                <td><input type="number" id="euro"></td>
+            </tr>
+            <tr>
+                <td><img src="japan.png"></td>
+                <td style="color: white">&#165</td>
+                <td><input type="number" id="jap"></td>
+            </tr>
+
+            <tr>
+                <td colspan="3"><input type="button" value="Convert" onclick="convert()"></td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="backendregister.css">
+    <link rel="shortcut icon" href="register.ico">
+    <title>Login/Registration Form</title>
+    <!-- <script>
+        function validate() {
+            var p = document.getElementById("pass");
+            var pat_pass = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$/
+            if (p.value == "") {
+                alert("Enter the password");
+                return false;
+            } else {
+                if (pat_pass.test(p.value)) {
+                    alert("Your form is submitted successfully!");
+                    return true;
+                } else {
+                    alert("It contains at least 8 characters and at most 20 characters.It contains at least one digit.It contains at least one upper case alphabet.It contains at least one lower case alphabet.It contains at least one special character which includes !@#$%&*()-+=^.It doesn’t contain any white space.");
+                    return false;
+                }
+
+            }
+        }
+    </script> -->
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Registration</h1>
+        <form onsubmit="return function validate()">
+
+            <p>Password did not match!</p>
+            <input type="text" name="username" placeholder="name" pattern="(^[A-Z]{1})([a-z]+[ ]{1})([A-Z]{1}[a-z]+)" maxlength="15" required>
+            <input type="text" name="mob" placeholder="mobile no." required pattern="^[+91][0-9]{12}$">
+            <input type="email" name="email" placeholder="email id" pattern="^[a-z][a-z0-9\._]+@[a-z]+.[a-z]{2,3}$" required>
+            <input type="password" name="pass" placeholder="password" id="pass" required pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$">
+            <input type="password" name="confirm-pass" placeholder=" confirm password" required pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$">
+
+
+
+            <table>
+                <tr>
+                    <td width="60%">Are you 18 years or older?</td>
+                    <td width="10%"><input type="radio" name="one" required></td>
+                    <td width="10%"> Yes</td>
+                    <td width="10%"> <input type="radio" name="one" required></td>
+                    <td width="10%"> No</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td> <input type="checkbox" required></td>
+                    <td> Have you read our policy,terms & conditions.</td>
+                </tr>
+
+
+            </table>
+
+            <div class="btns">
+                <button type="submit">Register</button>
+
+            </div>
+        </form>
+    </div>
+
+
+</body>
